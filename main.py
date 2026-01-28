@@ -15,17 +15,11 @@ import logging
 from typing import Dict, List, Optional, Tuple, Any
 from pathlib import Path
 from enum import Enum
+from vkbottle import Bot, Message
+from vkbottle.bot import BotLabeler
+from vkbottle_types.codegen.objects import UsersUserFull
+VKBOTTLE_AVAILABLE = True
 
-try:
-    from vkbottle import Bot, Message
-    from vkbottle.bot import BotLabeler
-    from vkbottle_types.codegen.objects import UsersUserFull
-    VKBOTTLE_AVAILABLE = True
-except ImportError:
-    print("❌ Ошибка: vkbottle не установлен!")
-    print("Установите: pip install vkbottle")
-    VKBOTTLE_AVAILABLE = False
-    exit(1)
 
 # ============= КОНФИГУРАЦИЯ =============
 # ↓↓↓ ЗДЕСЬ НАСТРОЙТЕ СВОЙ БОТ ↓↓↓
